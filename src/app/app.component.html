@@ -19,8 +19,10 @@
     </agm-snazzy-info-window>
   </agm-marker>
 
-  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'" [circleDraggable]="true"
-    [editable]="true">
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="10000" [fillColor]="'red'" [strokeColor]="'blue'"
+    [strokeWeight]="4" [fillOpacity]="0.4" [strokeOpacity]="0.4" [circleDraggable]="true" [editable]="true"
+    (dragEnd)="circleDragEnd($event)" (radiusChange)="circleRadiusChange($event)"
+    (centerChange)="circleCenterChange($event)" (circleClick)="circleClick($event)"
+    (rightClick)="circleRightClick($event)">
   </agm-circle>
-
 </agm-map>

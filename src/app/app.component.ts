@@ -32,7 +32,27 @@ export class AppComponent {
   }
 
   markerDragEnd(m: MvMarker, $event: any) {
-    console.log('dragEnd', m, $event);
+    console.log('markerDragEnd', m, $event);
+  }
+
+  circleDragEnd($event: any) {
+    console.log('circleDragEnd', $event);
+  }
+
+  circleRadiusChange($event: any) {
+    console.log('circleRadiusChange', $event);
+  }
+
+  circleCenterChange($event: any) {
+    console.log('circleCenterChange', $event);
+  }
+
+  circleClick($event: any) {
+    console.log('circleClick', $event);
+  }
+
+  circleRightClick($event: any) {
+    console.log('circleRightClick', $event);
   }
 
   markers: MvMarker[] = [
